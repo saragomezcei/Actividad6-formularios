@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 1. Registro de Usuario:
+Campos: Nombre de usuario, dirección de correo electrónico, contraseña, confirmación de contraseña, país, fecha de nacimiento.
+Requerimientos: Validación de correo electrónico,  aceptación de términos y condiciones con link a TyC.-->
+<div>
+    <form action="https://ecampus.rocks/test-forms.php" method="post">
+        <label>Nombre de usuario
+            <input type="text" name="nombreusuario">
+        </label>
+        <label>Dirección de correo electrónico
+            <input type="email" name="email">
+        </label>
+        <label>Contraseña
+            <input type="password" name="password1">
+        </label>
+        <label>Confirma tu contraseña
+            <input type="password" name="password2">
+        </label>
+        <label>País
+            <select name="pais">
+                <option value="ES">España</option>
+                <option value="ARG">Argentina</option>
+                <option value="COL">Colombia</option>
+                <option value="FR">Francia</option>
+                <option value="EEUU">Estados Unidos</option>
+            </select>
+        </label>
+        <label>Fecha de nacimiento
+            <input type="date" name="birthday">
+        </label>
+        <label class="terms">
+            <input type="checkbox" name="terms">
+            He leído y acepto los <a href="#">Términos y Condiciones</a>.
+        </label>
+        <button type="submit">
+            <h3>Enviar</h3>
+        </button>
+    </form>
+</div>
+<!--
+        2. Formulario de Contacto:
+Campos: Nombre, dirección de correo electrónico, asunto, mensaje.
+Requerimientos: Validación de correo electrónico, campo de mensaje obligatorio.
+-->
+<div>
+    <form action="https://ecampus.rocks/test-forms.php" method="post">
+        <label>Nombre:
+            <input type="text" name="nombre">
+        </label>
+        <label>Dirección de correo electrónico:
+            <input type="email" name="email">
+        </label>
+        <label>Asunto:
+            <input type="text" name="asunto">
+        </label>
+        <label>Mensaje:
+            <textarea name="mensaje" rows="5" required></textarea>
+        </label>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+  
+    <!--
+3. Pedido de Producto:
+Campos: Nombre completo, dirección de envío, ciudad, código postal, país, teléfono, lista de productos (con campos para cantidad y descripción), método de pago.
+Requerimientos: Validación de campos obligatorios, selección de método de pago.
+    -->
+    <div>
+        <form action="https://ecampus.rocks/test-forms.php" method="post">
+            <label>Nombre completo:
+                <input type="text" name="name">
+            </label>
+            <label>Dirección de envío:
+                <input type="text" name="adress">
+            </label>
+            <label>Ciudad:
+                <select name="ciudad">
+                    <option value="vlc">Valencia</option>
+                    <option value="mdr">Madrid</option>
+                    <option value="svll">Sevilla</option>
+                    <option value="bcn">Barcelona</option>
+                </select>
+            </label>
+            <label>Código postal:
+                <input type="number" name="postalcode">
+            </label>
+            <label>País:
+                <select name="pais">
+                    <option value="ES">España</option>
+                    <option value="ARG">Argentina</option>
+                    <option value="COL">Colombia</option>
+                    <option value="FR">Francia</option>
+                    <option value="EEUU">Estados Unidos</option>
+                </select>
+            </label>
+            <label>Teléfono:
+                <input type="number" name="phone">
+            </label>
+            <p>Lista de productos</p>
+            <label class="input-number">Producto 1
+                <input name="producto1" type="number" step="1" min="0">
+            </label>
+            <label class="input-number">Producto 2
+                <input name="producto2" type="number" step="1" min="0">
+            </label>
+            <label class="input-number">Producto 3
+                <input name="producto3" type="number" step="1" min="0">
+            </label>
+            <p>Método de pago</p>
+            <label>Tarjeta de crédito
+                <input type="radio" name="payment" value="card" checked>
+            </label>
+            <label>Paypal
+                <input type="radio" name="payment" value="paypal">
+            </label>
+            <label>ApplePay
+                <input type="radio" name="payment" value="apple">
+            </label>
+            <label>GooglePay
+                <input type="radio" name="payment" value="google">
+            </label>
+        </form>
+    </div>  
+    
+    <!--
+    4. Reserva de Hotel:
+Campos: Nombre completo, dirección de correo electrónico, número de teléfono, fecha de llegada, fecha de salida, tipo de habitación, número de huéspedes, solicitudes especiales (por ejemplo, cama adicional).
+Requerimientos: Validación de fechas, selección de tipo de habitación, confirmación de reserva.
+-->
+<div>
+    <form action="https://ecampus.rocks/test-forms.php" method="post">
+        <label>Nombre de usuario
+            <input type="text" name="nombreusuario">
+        </label>
+        <label>Dirección de correo electrónico
+            <input type="email" name="email">
+        </label>
+        <label>Teléfono:
+            <input type="number" name="phone">
+        </label>
+        <label>Fecha de llegada
+            <input type="date" name="date-checkin">
+        </label>
+        <label>Fecha de salida
+            <input type="date" name="date-checkout">
+        </label>
+        <select name="room">
+            <option value="single">Individual</option>
+            <option value="double-1">Doble con una cama</option>
+            <option value="double-2">Doble con dos camas</option>
+            <option value="triple">Triple</option>
+        </select>
+        <label>Número de huéspedes
+            <input name="guests-number" type="number" step="1" min="0">
+        </label>
+        <textarea name="notes" id="" cols="30" rows="10">Solicitudes especiales</textarea>
+    </form>
+</div>
+
+<!--
+
+5. Comentarios de Producto:
+Campos: Nombre, dirección de correo electrónico, calificación (estrellas), comentario.
+Requerimientos: Validación de correo electrónico, campo de comentario obligatorio, selección de calificación.
+-->
+<div>
+    <form action="https://ecampus.rocks/test-forms.php" method="post">
+        <label>Nombre de usuario
+            <input type="text" name="nombreusuario">
+        </label>
+        <label>Dirección de correo electrónico
+            <input type="email" name="email">
+        </label>
+    <input type="range" name="score" min="1" max="5">
+    <textarea name="review" id="" cols="30" rows="10">Comentario</textarea>
+    
+    </form>
+    </div>
+</body>
+
+</html>
