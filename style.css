@@ -1,7 +1,7 @@
 * {
     padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -25,11 +25,15 @@ form {
     text-align: left;
     background-color: #ffbfd4;
     border-radius: 16px;
-    padding: 40px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.50);
+    padding: 32px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.50);
 }
 
-input[type="text"], [type="email"], [type="password"], [type="number"], [type="date"]{
+input[type="text"],
+[type="email"],
+[type="password"],
+[type="number"],
+[type="date"] {
     border-radius: 4px;
     border: 1px solid #e8608d;
     padding: 8px;
@@ -48,22 +52,23 @@ textarea {
 }
 
 .btn {
-    width: 100px;
+    width: 6rem;
     background-color: #e8608d;
     border: none;
     color: white;
-    padding: 16px;
+    padding: 1rem;
     border-radius: 4px;
-    margin: 32px 0;
+    margin-top: 1rem;
     cursor: pointer;
     font-size: large;
     font-weight: 600;
 }
 
 
-input, select {
+input,
+select {
     display: block;
-  }
+}
 
 .input-number {
     width: 100%;
@@ -86,17 +91,19 @@ input, select {
 
 .payment {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: space-between;
+    justify-content: flex-start;
+    text-align: center;
     width: 100%;
 }
 
 .terms input {
-display: inline;
-width: auto;
-border-color: #e8608d;
-  }
+    display: inline;
+    width: auto;
+    border-color: #e8608d;
+}
 
 .terms {
     display: flex;
@@ -116,3 +123,19 @@ select {
     background-position: calc(100% - 10px);
 }
 
+.valoracion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.valoracion__input {
+    width: 100%;
+}
+
+.valoracion__text {
+    display: flex;
+    justify-content: space-between;
+}

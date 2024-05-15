@@ -17,7 +17,7 @@ Requerimientos: Validación de correo electrónico,  aceptación de términos y 
             <label>Nombre de usuario
                 <input type="text" name="nombreusuario">
             </label>
-            <label>Dirección de correo electrónico
+            <label>Correo electrónico
                 <input type="email" name="email">
             </label>
             <label>Contraseña
@@ -39,7 +39,7 @@ Requerimientos: Validación de correo electrónico,  aceptación de términos y 
                 <input type="date" name="birthday">
             </label>
             <label class="terms">
-                <input type="checkbox" name="terms">
+                <input type="checkbox" name="terms" required>
                 He leído y acepto los <a href="#">Términos y Condiciones</a>.
             </label>
             <button class="btn" type="submit">Enviar</button>
@@ -55,7 +55,7 @@ Requerimientos: Validación de correo electrónico, campo de mensaje obligatorio
             <label>Nombre:
                 <input type="text" name="nombre">
             </label>
-            <label>Dirección de correo electrónico:
+            <label>Correo electrónico:
                 <input type="email" name="email">
             </label>
             <label>Asunto:
@@ -117,20 +117,20 @@ Requerimientos: Validación de campos obligatorios, selección de método de pag
             <p>Método de pago</p>
             <div class="payment__options">
                 <label class="payment">
-                    Tarjeta de crédito
                     <input type="radio" name="payment" value="card" checked>
+                    Tarjeta de crédito
                 </label>
                 <label class="payment">
-                    Paypal
                     <input type="radio" name="payment" value="paypal">
+                    Paypal
                 </label>
                 <label class="payment">
-                    ApplePay
                     <input type="radio" name="payment" value="apple">
+                    ApplePay
                 </label>
                 <label class="payment">
-                    GooglePay
                     <input type="radio" name="payment" value="google">
+                    GooglePay
                 </label>
             </div>
             <button class="btn">Enviar</button>
@@ -147,7 +147,7 @@ Requerimientos: Validación de fechas, selección de tipo de habitación, confir
             <label>Nombre de usuario
                 <input type="text" name="nombreusuario">
             </label>
-            <label>Dirección de correo electrónico
+            <label>Correo electrónico
                 <input type="email" name="email">
             </label>
             <label>Teléfono:
@@ -184,10 +184,20 @@ Requerimientos: Validación de correo electrónico, campo de comentario obligato
             <label>Nombre de usuario
                 <input type="text" name="nombreusuario">
             </label>
-            <label>Dirección de correo electrónico
+            <label>Correo electrónico
                 <input type="email" name="email">
             </label>
-            <input type="range" name="score" min="1" max="5">
+            <label class="valoracion">
+                Valoración
+                <input class="valoracion__input" type="range" name="score" step="1" min="1" max="5">
+                <div class="valoracion__text">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
+            </label>
             <textarea name="review" id="" cols="30" rows="10">Comentario</textarea>
             <button class="btn">Enviar</button>
         </form>
